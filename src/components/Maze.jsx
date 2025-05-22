@@ -1,7 +1,6 @@
 import Cell from './Cell';
 import './Maze.css'
 
-
 function Maze({maze}){
     return (
         <div className="maze">

@@ -5,7 +5,7 @@ import Maze from './components/maze';
 
 function App() {
   const [maze, setMaze] = useState([]);
-  const [size] = useState(20);
+  const size = 10;
   
   useEffect(() => generatePath(), []);
 
@@ -21,7 +21,6 @@ function App() {
         matrix.push(row);
     }
     return matrix;
-    // console.log('blank', matrix);
   }
 
   function generatePath(){
@@ -52,20 +51,20 @@ function App() {
     }
 
     carvePath(1,1);
-
-
     matrix[1][0] = "start";
     matrix[size-2][size -1] = "end";
 
-
     setMaze(matrix);
-    console.log('new maze' , matrix);
   }
 
   return (
     <>
-      <button onClick={generatePath}> Generate Maze </button>
+      <h1>Pathfinder Visual</h1>
       <Maze maze={maze}/>
+      <h2>Generate a maze. Select a search path.</h2>
+      <button onClick={generatePath}> Generate Maze </button>
+      <button onClick={generatePath}> Breadth-First </button>
+      <button onClick={generatePath}> Depth-First </button>
 
     </>
   )
