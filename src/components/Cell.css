@@ -1,0 +1,21 @@
+.cell{
+    height: 40px;
+    width: 40px;
+    border: 1px solid black;
+}
+
+.cell.wall{
+    background-color: grey;
+}
+
+.cell.start{
+    background-color: green;
+}
+
+.cell.end{
+    background-color: red;
+}
+
+.cell.path{
+    background-color: white;
+}
